@@ -1,90 +1,412 @@
-<!doctype html>
-<title>project_jin</title>
-<link rel="stylesheet" type="text/css" href="project.css">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width">
+<!DOCTYPE html>
+<html class=''>
+<head><script src='//assets.codepen.io/assets/editor/live/console_runner-d0a557e5cb67f9cd9bbb9673355c7e8e.js'></script><script src='//assets.codepen.io/assets/editor/live/events_runner-21174b4c7273cfddc124acb0876792e0.js'></script><script src='//assets.codepen.io/assets/editor/live/css_live_reload_init-7618a0de08795409d8f6c9ef6805f7b2.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="canonical" href="https://codepen.io/Sonick/pen/HthaI" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet prefetch' href='//codepen.io/assets/reset/reset.css'><script src='//codepen.io/assets/libs/prefixfree.min.js'></script>
+<style class="cp-pen-styles">@font-face {
+  font-family: 'Electrolize';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Electrolize'), local('Electrolize-Regular'), url(http://themes.googleusercontent.com/static/fonts/electrolize/v2/DDy9sgU2U7S4xAwH5thnJ4bN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
 
-<header>
-	<a href="index.html" target="_blank"><img src="picture/logo.jpg" id="logo"></a>
-    <nav>
-    <a href="starwars.html" class="left">StarWars</a>
-    <a href="Marvel.html" class="left">Marvel</a>
-    <a href="random.html" class="right">Random</a>
-    <a href="DC.html" class="right">DC</a>
-    </nav>
-</header>
+body {
+  background: #310404 url(http://web-sonick.zz.mu/images/sl/red_texture.jpg) repeat top left;
+  font-family: 'Electrolize';
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1.main,
+p.demos {
+  -webkit-animation-delay: 18s;
+  -moz-animation-delay: 18s;
+  -ms-animation-delay: 18s;
+  animation-delay: 18s;
+}
+
+.sp-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+  background: -ms-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+  background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+}
+
+.sp-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+}
+
+.sp-container h2 {
+  position: absolute;
+  top: 50%;
+  line-height: 100px;
+  height: 90px;
+  margin-top: -50px;
+  font-size: 90px;
+  width: 100%;
+  text-align: center;
+  color: transparent;
+  -webkit-animation: blurFadeInOut 3s ease-in backwards;
+  -moz-animation: blurFadeInOut 3s ease-in backwards;
+  -ms-animation: blurFadeInOut 3s ease-in backwards;
+  animation: blurFadeInOut 3s ease-in backwards;
+}
+
+.sp-container h2.frame-1 {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.sp-container h2.frame-2 {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.sp-container h2.frame-3 {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.sp-container h2.frame-4 {
+  font-size: 200px;
+  -webkit-animation-delay: 9s;
+  -moz-animation-delay: 9s;
+  -ms-animation-delay: 9s;
+  animation-delay: 9s;
+}
+
+.sp-container h2.frame-5 {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  animation: none;
+  color: transparent;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.sp-container h2.frame-5 span {
+  -webkit-animation: blurFadeIn 3s ease-in 12s backwards;
+  -moz-animation: blurFadeIn 1s ease-in 12s backwards;
+  -ms-animation: blurFadeIn 3s ease-in 12s backwards;
+  animation: blurFadeIn 3s ease-in 12s backwards;
+  color: transparent;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+.sp-container h2.frame-5 span:nth-child(2) {
+  -webkit-animation-delay: 13s;
+  -moz-animation-delay: 13s;
+  -ms-animation-delay: 13s;
+  animation-delay: 13s;
+}
+
+.sp-container h2.frame-5 span:nth-child(3) {
+  -webkit-animation-delay: 14s;
+  -moz-animation-delay: 14s;
+  -ms-animation-delay: 14s;
+  animation-delay: 14s;
+}
+
+.sp-globe {
+  position: absolute;
+  width: 282px;
+  height: 273px;
+  left: 50%;
+  top: 50%;
+  margin: -137px 0 0 -141px;
+  background: transparent url(http://web-sonick.zz.mu/images/sl/globe.png) no-repeat top left;
+  -webkit-animation: fadeInBack 3.6s linear 14s backwards;
+  -moz-animation: fadeInBack 3.6s linear 14s backwards;
+  -ms-animation: fadeInBack 3.6s linear 14s backwards;
+  animation: fadeInBack 3.6s linear 14s backwards;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  -webkit-transform: scale(5);
+  -moz-transform: scale(5);
+  -o-transform: scale(5);
+  -ms-transform: scale(5);
+  transform: scale(5);
+}
+
+.sp-circle-link {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  margin-left: -50px;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  color: #3f1616;
+  font-size: 25px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: fadeInRotate 1s linear 16s backwards;
+  -moz-animation: fadeInRotate 1s linear 16s backwards;
+  -ms-animation: fadeInRotate 1s linear 16s backwards;
+  animation: fadeInRotate 1s linear 16s backwards;
+  -webkit-transform: scale(1) rotate(0deg);
+  -moz-transform: scale(1) rotate(0deg);
+  -o-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+
+.sp-circle-link:hover {
+  background: #85373b;
+  color: #fff;
+}
 
 
-<section>
+/**/
+
+@-webkit-keyframes blurFadeInOut {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    -webkit-transform: scale(1.3);
+  }
+  20%,
+  75% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    text-shadow: 0px 0px 50px #fff;
+    -webkit-transform: scale(0);
+  }
+}
+
+@-webkit-keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    -webkit-transform: scale(1.3);
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0px 0px 10px #fff;
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fadeInBack {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+  }
+  50% {
+    opacity: 0.4;
+    -webkit-transform: scale(2);
+  }
+  100% {
+    opacity: 0.2;
+    -webkit-transform: scale(5);
+  }
+}
+
+@-webkit-keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(360deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);
+  }
+}
 
 
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front" id="first">
-			<img src="picture/cap.jpg" class="picture">
-		</div>
-		<div class="back" id="first">
-			<img src="picture/ironman.jpg" class="picture">
-		</div>
-	</div>
+/**/
+
+@-moz-keyframes blurFadeInOut {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    -moz-transform: scale(1.3);
+  }
+  20%,
+  75% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    -moz-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    text-shadow: 0px 0px 50px #fff;
+    -moz-transform: scale(0);
+  }
+}
+
+@-moz-keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    -moz-transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    -moz-transform: scale(1);
+  }
+}
+
+@-moz-keyframes fadeInBack {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0);
+  }
+  50% {
+    opacity: 0.4;
+    -moz-transform: scale(2);
+  }
+  100% {
+    opacity: 0.2;
+    -moz-transform: scale(5);
+  }
+}
+
+@-moz-keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0) rotate(360deg);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1) rotate(0deg);
+  }
+}
+
+
+/**/
+
+@keyframes blurFadeInOut {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    transform: scale(1.3);
+  }
+  20%,
+  75% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    text-shadow: 0px 0px 50px #fff;
+    transform: scale(0);
+  }
+}
+
+@keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0px 0px 40px #fff;
+    transform: scale(1.3);
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: 0px 0px 10px #fff;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0px 0px 1px #fff;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInBack {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(5);
+  }
+}
+
+@keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}</style></head><body>
+v
+<div class="container">
+  <div class="header">
+    <div class="clr"></div>
+  </div>
+  <div class="sp-container">
+    <div class="sp-content">
+      <div class="sp-globe"></div>
+      <h2 class="frame-1">This Summer</h2>
+
+      <h2 class="frame-2">Marvel</h2>
+
+      <h2 class="frame-3">DC</h2>
+
+      <h2 class="frame-4">IN ONE MOVIE!</h2>
+
+      <h2 class="frame-5"><span>Just kidding.</span> <span>Don't be silly.</span> <span>Go home.</span></h2>
+      <a class="sp-circle-link" href="https://preview.c9users.io/jinding1998/project_2/main.html?_c9_id=livepreview3&_c9_host=https://ide.c9.io">OK...</a>
+
+    </div>
+  </div>
 </div>
 
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front" id="second">
-			<img src="picture/deadpool.jpg" class="picture">
-		</div>
-		<div class="back" id="second">
-			<img src="picture/hulk.jpg" class="picture">
-		</div>
-	</div>
-</div>
+<script type="text/javascript" src="/path/to/shared/js/EventHelpers.js">
+</script>
+<script type="text/javascript" src="/path/to/shared/js/cssQuery-p.js">
+</script>
+<script type="text/javascript" src="/path/to/shared/js/jcoglan.com/sylvester.js">
+</script>
+<script type="text/javascript" src="/path/to/shared/js/cssSandpaper.js">
+</script>
 
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front" id="third">
-			<img src="picture/r.jpg" class="picture">
-		</div>
-		<div class="back" id="third">
-			<img src="picture/v.jpg" class="picture">
-		</div>
-	</div>
-</div>
-
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front" id="fourth">
-			<img src="picture/d2.jpg" class="picture">
-		</div>
-		<div class="back" id="fourth">
-			<img src="picture/la.jpg" class="picture">
-		</div>
-	</div>
-</div>
-
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front" id="fifth">
-			<img src="picture/star.jpg" class="picture">
-		</div>
-		<div class="back" id="fifth">
-			<img src="picture/ultra.jpg" class="picture">
-		</div>
-	</div>
-</div>
-
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-	<div class="flipper">
-		<div class="front" id="sixth">
-			<img src="picture/joker.jpg" class="picture">
-		</div>
-		<div class="back" id="sixth">
-			<img src="picture/bat.jpg" class="picture">
-		</div>
-	</div>
-</div>
-</section>
-
-<footer>
-	<h1>Well, they could be together in the pictures though</h1>
-</footer>
+</body></html>
